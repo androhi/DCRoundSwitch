@@ -10,15 +10,15 @@
 		AB6FE5D313C420A3006BCDBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6FE5D213C420A3006BCDBB /* UIKit.framework */; };
 		AB6FE5D513C420A3006BCDBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6FE5D413C420A3006BCDBB /* Foundation.framework */; };
 		AB6FE5D713C420A3006BCDBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6FE5D613C420A3006BCDBB /* CoreGraphics.framework */; };
-		AB6FE5E013C420A3006BCDBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5DF13C420A3006BCDBB /* main.m */; };
-		AB6FE5E313C420A3006BCDBB /* DCRoundSwitchDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5E213C420A3006BCDBB /* DCRoundSwitchDemoAppDelegate.m */; };
-		AB6FE5E913C420A3006BCDBB /* DCRoundSwitchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5E813C420A3006BCDBB /* DCRoundSwitchDemoViewController.m */; };
+		AB6FE5E013C420A3006BCDBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5DF13C420A3006BCDBB /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB6FE5E313C420A3006BCDBB /* DCRoundSwitchDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5E213C420A3006BCDBB /* DCRoundSwitchDemoAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB6FE5E913C420A3006BCDBB /* DCRoundSwitchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5E813C420A3006BCDBB /* DCRoundSwitchDemoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AB6FE60313C420D6006BCDBB /* DCRoundSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5FC13C420D6006BCDBB /* DCRoundSwitch.m */; };
 		AB6FE60413C420D6006BCDBB /* DCRoundSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE5FE13C420D6006BCDBB /* DCRoundSwitchKnobLayer.m */; };
 		AB6FE60513C420D6006BCDBB /* DCRoundSwitchOutlineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE60013C420D6006BCDBB /* DCRoundSwitchOutlineLayer.m */; };
 		AB6FE60613C420D6006BCDBB /* DCRoundSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE60213C420D6006BCDBB /* DCRoundSwitchToggleLayer.m */; };
 		AB6FE60913C420DF006BCDBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6FE60813C420DF006BCDBB /* QuartzCore.framework */; };
-		B5FFD9C815762AC60085F0FA /* TestSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FFD9C715762AC60085F0FA /* TestSwitch.m */; };
+		B5FFD9C815762AC60085F0FA /* TestSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FFD9C715762AC60085F0FA /* TestSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5FFD9CC15762AFC0085F0FA /* TestSwitchKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FFD9CB15762AFC0085F0FA /* TestSwitchKnobLayer.m */; };
 		DA7A60B613FEA495000F7F8D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7A60B713FEA495000F7F8D /* MainWindow.xib */; };
 		DA7A60B813FEA4A2000F7F8D /* DCRoundSwitchDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7A60B913FEA4A2000F7F8D /* DCRoundSwitchDemoViewController.xib */; };
@@ -245,7 +245,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -259,7 +259,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -272,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -288,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DCRoundSwitchDemo/DCRoundSwitchDemo-Prefix.pch";

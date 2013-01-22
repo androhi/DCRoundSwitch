@@ -31,7 +31,7 @@
 
 @implementation DCRoundSwitch
 @synthesize outlineLayer, toggleLayer, knobLayer, clipLayer, ignoreTap;
-@synthesize on, onText, offText;
+@synthesize on, onText, offText, fontSize;
 @synthesize onTintColor;
 
 #pragma mark -
@@ -129,7 +129,7 @@
 	// this is the knob, and sits on top of the layer stack. note that the knob shadow is NOT drawn here, it is drawn on the
 	// toggleLayer so it doesn't bleed out over the outlineLayer.
 
-	self.toggleLayer = [[[[self class] toggleLayerClass] alloc] initWithOnString:self.onText offString:self.offText onTintColor:[UIColor colorWithRed:0.000 green:0.478 blue:0.882 alpha:1.0]];
+	self.toggleLayer = [[[[self class] toggleLayerClass] alloc] initWithOnString:self.onText offString:self.offText onTintColor:[UIColor colorWithRed:0.000 green:0.478 blue:0.882 alpha:1.0] fontSize:self.fontSize];
 	self.toggleLayer.drawOnTint = NO;
 	self.toggleLayer.clip = YES;
 	[self.layer addSublayer:self.toggleLayer];
@@ -465,4 +465,12 @@
 	}
 }
 
+- (void)setFontSize:(NSNumber *) newFontSize
+{
+    if (newFontSize != fontSize)
+    {
+        self.toggleLayer.fontSize = newFontSize;
+        [self.toggleLayer setNeedsDisplay];
+    }
+}
 @end

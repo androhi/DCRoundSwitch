@@ -12,7 +12,7 @@
 #import "DCRoundSwitchToggleLayer.h"
 
 @implementation DCRoundSwitchToggleLayer
-@synthesize onString, offString, onTintColor;
+@synthesize onString, offString, onTintColor, fontSize;
 @synthesize drawOnTint;
 @synthesize clip;
 @synthesize labelFont;
@@ -26,13 +26,14 @@
 	[super dealloc];
 }*/
 
-- (id)initWithOnString:(NSString *)anOnString offString:(NSString *)anOffString onTintColor:(UIColor *)anOnTintColor
+- (id)initWithOnString:(NSString *)anOnString offString:(NSString *)anOffString onTintColor:(UIColor *)anOnTintColor fontSize:(NSNumber *)anFontSize
 {
 	if ((self = [super init]))
 	{
 		self.onString = anOnString;
 		self.offString = anOffString;
 		self.onTintColor = anOnTintColor;
+        self.fontSize = anFontSize;
 	}
 
 	return self;
@@ -40,7 +41,11 @@
 
 - (UIFont *)labelFont
 {
-	return [UIFont boldSystemFontOfSize:ceilf(self.bounds.size.height * .6)];
+    if ([self.fontSize floatValue] > 0.0f) {
+        return [UIFont boldSystemFontOfSize:[self.fontSize floatValue]];
+    } else {
+        return [UIFont boldSystemFontOfSize:ceilf(self.bounds.size.height * .6)];
+    }
 }
 
 - (void)drawInContext:(CGContextRef)context

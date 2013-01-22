@@ -45,6 +45,7 @@
 
 	self.switch2.onTintColor = [UIColor redColor];
 	self.switch2.on = YES;
+    self.switch2.fontSize = [NSNumber numberWithFloat:6.0f];
 
 	self.switch3.onTintColor = [UIColor blackColor];
 	self.switch3.on = YES;
